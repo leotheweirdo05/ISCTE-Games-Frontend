@@ -1,10 +1,14 @@
 // src/pages/IndexPage.jsx
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Helmet } from 'react-helmet';
 
 export default function IndexPage() {
   return (
     <>
+    <Helmet>
+        <title>Game Select</title>
+      </Helmet>
       <main>
         <div className="p-3 mb-2 bg-danger">
           <section>
