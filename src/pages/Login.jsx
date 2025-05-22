@@ -22,35 +22,35 @@ return (
     </Helmet>
 
     <Container className="mt-3" style={{ maxWidth: 400 }}>
-      <h2 className="mb-4 text-center">Login</h2>
+      <h2 className="mb-4 text-center iscte-blue-text">Login</h2>
       <Form onSubmit={handleLogin}>
         <Form.Group className="mb-3">
-          <Form.Label>Email/Student Number</Form.Label>
+          <Form.Label className="iscte-blue-text fw-light">Email/Student Number</Form.Label>
           <Form.Control 
             type="text" 
             placeholder="Enter email or student number" 
             value={email}
             onChange={(e) => setEmail(e.target.value)} 
-            className="no-radius"
+            className="form-style"
           />
         </Form.Group>
 
         <Form.Group className="mb-3">
-          <Form.Label>Password</Form.Label>
+          <Form.Label className="iscte-blue-text fw-light">Password</Form.Label>
           <Form.Control 
             type="password" 
             placeholder="Enter password" 
             value={password}
             onChange={(e) => setPassword(e.target.value)} 
-            className="no-radius"
+            className="form-style"
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="w-100 mt-3 mb-3 no-radius">
+        <Button variant="primary" type="submit" className="w-100 mt-3 mb-3 button-style">
           Login
         </Button>
 
-        <div className="mb-3 text-center">
+        <div className="mb-3 text-center iscte-bluer-text">
           <a href="#" onClick={(e) => { 
             e.preventDefault(); 
             alert("Not on this branch! Tune in for feature/forgotPassword :)"); 
