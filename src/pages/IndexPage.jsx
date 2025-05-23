@@ -2,6 +2,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 export default function IndexPage() {
   return (
@@ -27,9 +28,9 @@ export default function IndexPage() {
             <div className="p-2">
               <div className="row g-2">
                 <div className="col">
-                  <a href="html-wips/games.html" className="text-decoration-none">
-                    <div className="p-4 bg-success text-white rounded">2048 [WIP]</div>
-                  </a>
+                  <Link to="/play/2048" className="text-decoration-none">
+                    <div className="p-4 bg-success text-white rounded">2048</div>
+                  </Link>
                 </div>
                 <div className="col">
                   <div className="p-4 bg-success text-white rounded">gaem tu</div>
