@@ -27,8 +27,8 @@ export default function IndexPage() {
             <div className="p-2">
               <div className="row g-2">
                 <div className="col">
-                  <a href="games.html" className="text-decoration-none">
-                    <div className="p-4 bg-success text-white rounded">gaem wan</div>
+                  <a href="html-wips/games.html" className="text-decoration-none">
+                    <div className="p-4 bg-success text-white rounded">2048 [WIP]</div>
                   </a>
                 </div>
                 <div className="col">
