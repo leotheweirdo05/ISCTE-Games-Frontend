@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
@@ -11,6 +12,10 @@ const Login = ({ onLogin }) => {
 
   const handleLogin = (e) => {
     e.preventDefault();
+    if (!email.trim() || !password.trim()) {
+    alert('Please fill in both email/student number and password.');
+    return;
+  }
     onLogin(); // pretend login success
     navigate('/');
   };
@@ -46,17 +51,13 @@ return (
           />
         </Form.Group>
 
-        <Button variant="primary" type="submit" className="w-100 mt-3 mb-3 button-style">
+        <Button variant="primary" type="submit" className="w-100 mt-2 mb-3 button-style">
           Login
         </Button>
-
-        <div className="mb-3 text-center iscte-bluer-text">
-          <a href="#" onClick={(e) => { 
-            e.preventDefault(); 
-            alert("Not on this branch! Tune in for feature/forgotPassword :)"); 
-          }}>
+        <div className="text-center">
+          <Link to="/forgot-password" className="iscte-bluer-text fw-light">
             I forgot my password
-          </a>
+          </Link>
         </div>
       </Form>
     </Container>
