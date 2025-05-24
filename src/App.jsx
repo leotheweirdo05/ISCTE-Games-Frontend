@@ -9,6 +9,7 @@ import Game2048 from './pages/games/Game2048.jsx';
 
 import Header from './components/Header.jsx';
 import LoginHeader from './components/LoginHeader.jsx';
+import BottomNav from './components/BottomNav.jsx';
 
 import './assets/css/styles.css';
 
@@ -25,6 +26,12 @@ function App() {
     return isLoggedIn ? <Header /> : null;
   };
 
+  const ShowBottomNav = () => {
+  const location = useLocation();
+  return location.pathname === '/' ? <BottomNav /> : null;
+};
+
+
   return (
     <Router>
       <ShowHeader />
@@ -35,6 +42,8 @@ function App() {
         <Route path="/" element={isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />} />
         <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
       </Routes>
+
+      <ShowBottomNav />
     </Router>
   );
 }
