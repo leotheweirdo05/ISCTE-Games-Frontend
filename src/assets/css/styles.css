@@ -35,3 +35,9 @@ body {
   height: 100%;
   border: none;
 }
+
+.game-select-style {
+  background-color: #ccc;
+  text-align: center;
+  color: black;
+}

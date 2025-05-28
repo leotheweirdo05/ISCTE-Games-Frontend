@@ -29,11 +29,11 @@ export default function IndexPage() {
               <div className="row g-2">
                 <div className="col">
                   <Link to="/play/2048" className="text-decoration-none">
-                    <div className="p-4 bg-success text-white rounded">2048</div>
+                    <div className="p-4 game-select-style rounded">2048</div>
                   </Link>
                 </div>
                 <div className="col">
-                  <div className="p-4 bg-success text-white rounded">gaem tu</div>
+                  <div className="p-4 game-select-style rounded">gaem tu</div>
                 </div>
               </div>
             </div>
@@ -41,10 +41,10 @@ export default function IndexPage() {
             <div className="p-2 mt-2">
               <div className="row g-2">
                 <div className="col">
-                  <div className="p-4 bg-success text-white rounded">gaem tree</div>
+                  <div className="p-4 game-select-style rounded">gaem tree</div>
                 </div>
                 <div className="col">
-                  <div className="p-4 bg-success text-white rounded">gaem for</div>
+                  <div className="p-4 game-select-style rounded">gaem for</div>
                 </div>
               </div>
             </div>
