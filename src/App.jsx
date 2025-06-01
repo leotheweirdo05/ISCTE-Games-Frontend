@@ -52,7 +52,7 @@ function App() {
         {/* Other Authenticated Routes */}
         <Route path="/" element={<Navigate to={isLoggedIn ? "/games" : "/login"} replace />} />
         <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
-        <Route path="/play/Shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
+        <Route path="/play/shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
       </Routes>
 
       <ShowBottomNav />
