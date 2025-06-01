@@ -13,7 +13,7 @@ export default function Games() {
       >
         {[
           { label: '2048', link: '/play/2048' },
-          { label: 'gaem tu' },
+          { label: 'Shooter', link: '/play/shooter' },
           { label: 'gaem tree' },
           { label: 'gaem for' },
         ].map((item, i) => (
