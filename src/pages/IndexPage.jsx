@@ -33,7 +33,9 @@ export default function IndexPage() {
                   </Link>
                 </div>
                 <div className="col">
-                  <div className="p-4 bg-success text-white rounded">gaem tu</div>
+                  <Link to="/play/Shooter" className="text-decoration-none">
+                    <div className="p-4 bg-success text-white rounded">Shooter</div>
+                  </Link>
                 </div>
               </div>
             </div>

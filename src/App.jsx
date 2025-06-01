@@ -6,6 +6,7 @@ import Login from './pages/Login.jsx';
 import ForgotPassword from './pages/ForgotPassword.jsx';
 
 import Game2048 from './pages/games/Game2048.jsx';
+import GameShooter from './pages/games/GameShooter.jsx';
 
 import Header from './components/Header.jsx';
 import LoginHeader from './components/LoginHeader.jsx';
@@ -34,6 +35,7 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/" element={isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />} />
         <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
+        <Route path="/play/Shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
       </Routes>
     </Router>
   );
