@@ -25,8 +25,13 @@ function ShowHeader({ isLoggedIn }) {
 
 function ShowBottomNav() {
   const location = useLocation();
+  const { pathname } = location;
+
+  // Hide nav on these paths:
   const hiddenPaths = ['/login', '/forgot-password'];
-  return !hiddenPaths.includes(location.pathname) ? <BottomNav /> : null;
+  const isPlayPage = pathname.startsWith('/play/');
+
+  return !hiddenPaths.includes(pathname) && !isPlayPage ? <BottomNav /> : null;
 }
 
 function App() {
@@ -35,26 +40,33 @@ function App() {
   return (
     <Router>
       <ShowHeader isLoggedIn={isLoggedIn} />
-
       <Routes>
-        {/* Public Routes */}
+        {/* Public routes */}
         <Route path="/login" element={<Login onLogin={() => setIsLoggedIn(true)} />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
 
-        {/* Authenticated Tabs Routes (Games + Leaderboards) */}
-        {isLoggedIn && (
-          <Route element={<GameTabs />}>
-            <Route path="/games" element={isLoggedIn ? <Games /> : <Navigate to="/login" replace />} />
-            <Route path="/leaderboards" element={isLoggedIn ? <Leaderboards /> : <Navigate to="/login" replace />} />
-          </Route>
-        )}
+        {/* Authenticated routes with layout */}
+        <Route element={isLoggedIn ? <GameTabs /> : <Navigate to="/login" replace />}>
+          <Route path="/games" element={<Games />} />
+          <Route path="/leaderboards" element={<Leaderboards />} />
+        </Route>
 
-        {/* Other Authenticated Routes */}
-        <Route path="/" element={<Navigate to={isLoggedIn ? "/games" : "/login"} replace />} />
-        <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
-        <Route path="/play/shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
+        {/* Other authenticated routes */}
+        <Route
+          path="/play/2048"
+          element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />}
+        />
+        <Route
+          path="/play/shooter"
+          element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />}
+        />
+
+        {/* Redirect root */}
+        <Route
+          path="/"
+          element={<Navigate to={isLoggedIn ? "/games" : "/login"} replace />}
+        />
       </Routes>
-
       <ShowBottomNav />
     </Router>
   );
