@@ -7,7 +7,9 @@ export default function Header() {
     <header className={`d-block p-2 ${styles.header}`}>
       <div className="container text-center">
         <div className="row">
-          <div className="col">ISCTE</div>
+          <div className="col">
+            <img src="/images/iscte-logo.png" alt="ISCTE Logo" height="40" />
+          </div>
           <div className="col"></div>
           <div className="col">[img]</div>
         </div>
