@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import Header from '../components/Header.jsx';
+import GameTabs from '../components/GameTabs.jsx';
+import BottomNav from '../components/BottomNav.jsx';
 
 export default function Games() {
   return (
@@ -8,6 +11,9 @@ export default function Games() {
         <title>Games</title>
       </Helmet>
 
+      <Header />
+      <GameTabs />
+      
       <div
         className="games-grid-container"
       >
@@ -28,6 +34,8 @@ export default function Games() {
           )
         ))}
       </div>
+
+      <BottomNav />
     </>
   );
 }
