@@ -3,6 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Container, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from 'react-helmet';
+import LoginHeader from '../components/LoginHeader.jsx';
 
 const ForgotPassword = () => {
   const [email, setEmail] = useState('');
@@ -28,6 +29,8 @@ const ForgotPassword = () => {
       <Helmet>
         <title>Forgot Password</title>
       </Helmet>
+
+      <LoginHeader />
 
       <Container className="mt-3" style={{ maxWidth: 400 }}>
         <h2 className="mb-4 text-center iscte-blue-text">I forgot my password</h2>

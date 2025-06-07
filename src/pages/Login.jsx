@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import LoginHeader from '../components/LoginHeader.jsx';
 
 const Login = ({ onLogin }) => {
   const [email, setEmail] = useState('');
@@ -27,6 +28,8 @@ const Login = ({ onLogin }) => {
       <Helmet>
         <title>Login</title>
       </Helmet>
+
+      <LoginHeader />
 
       <Container className="mt-3" style={{ maxWidth: 400 }}>
         <h2 className="mb-4 text-center iscte-blue-text">Login</h2>
