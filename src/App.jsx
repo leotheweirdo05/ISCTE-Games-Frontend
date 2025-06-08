@@ -8,6 +8,7 @@ import Games from './pages/Games.jsx';
 import Leaderboards from './pages/Leaderboards.jsx';
 import GameShooter from './pages/games/GameShooter.jsx';
 import Game2048 from './pages/games/Game2048.jsx';
+import GamePinball from './pages/games/GamePinball.jsx';
 
 import GameTabs from './components/GameTabs.jsx';
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/index" element={isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />} />
         <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
         <Route path="/play/shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
+        <Route path="/play/pinball" element={isLoggedIn ? <GamePinball /> : <Navigate to="/login" replace />} />
 
         {/* Root redirect */}
         <Route path="/" element={<Navigate to={isLoggedIn ? "/index" : "/login"} replace />} />

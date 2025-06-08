@@ -20,7 +20,7 @@ export default function Games() {
         {[
           { label: '2048', link: '/play/2048' },
           { label: 'Shooter', link: '/play/shooter' },
-          { label: 'gaem tree' },
+          { label: 'Pinball', link: '/play/pinball' },
           { label: 'gaem for' },
         ].map((item, i) => (
           item.link ? (
