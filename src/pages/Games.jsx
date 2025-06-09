@@ -18,10 +18,10 @@ export default function Games() {
         className="games-grid-container"
       >
         {[
-          { label: '2048', link: '/play/2048' },
-          { label: 'Shooter', link: '/play/shooter' },
-          { label: 'Pinball', link: '/play/pinball' },
-          { label: 'Memory Game', link: '/play/memory' },
+          { label: '2048', link: '/preview/2048' },
+          { label: 'Shooter', link: '/preview/shooter' },
+          { label: 'Pinball', link: '/preview/pinball' },
+          { label: 'Memory Game', link: '/preview/memory' },
         ].map((item, i) => (
           item.link ? (
             <Link to={item.link} className="game-tile text-decoration-none" key={i}>
