@@ -20,8 +20,8 @@ export default function Games() {
         {[
           { label: '2048', link: '/play/2048' },
           { label: 'Shooter', link: '/play/shooter' },
-          { label: 'gaem tree' },
-          { label: 'gaem for' },
+          { label: 'Pinball', link: '/play/pinball' },
+          { label: 'Memory Game', link: '/play/memory' },
         ].map((item, i) => (
           item.link ? (
             <Link to={item.link} className="game-tile text-decoration-none" key={i}>
