@@ -8,14 +8,19 @@ const PreGameMemory = () => {
   return (
     <>
       <Helmet>
-        <title>PreMemory</title>
+        <title>Memory</title>
       </Helmet>
 
       <Header />
-      <h1>Test</h1>
-      <p>Epic test page</p>
-      <Link to='/play/memory'>[DEBUG LINK TO Memory GAEM]</Link>
-      
+  
+      <div className="game-description">
+        <h1>Memory Game</h1>
+        <h4>Match all pairs of cards as fast as possible!</h4>
+        <p>Click on a card to flip it</p>
+        <Link to='/play/memory'>
+          <button className="play-button">Play</button>
+        </Link>
+      </div>
     </>
   );
 };

@@ -8,14 +8,19 @@ const PreGamePinball = () => {
   return (
     <>
       <Helmet>
-        <title>PrePinball</title>
+        <title>Pinball</title>
       </Helmet>
-
+  
       <Header />
-      <h1>Test</h1>
-      <p>Epic test page</p>
-      <Link to='/play/pinball'>[DEBUG LINK TO Pinball GAEM]</Link>
-      
+    
+      <div className="game-description">
+        <h1>Pinball</h1>
+        <h4>Get the highest score you can by hitting the bumpers!</h4>
+        <p>Press either the left or right side of the screen to use the flippers</p>
+        <Link to='/play/pinball'>
+          <button className="play-button">Play</button>
+        </Link>
+      </div>
     </>
   );
 };

@@ -38,7 +38,7 @@ body {
 
 .game-wrapper {
   position: fixed;
-  top: 40px; /* Height of your header */
+  top: 50px; /* Height of your header */
   left: 0;
   right: 0;
   bottom: 0;
@@ -89,4 +89,41 @@ body {
 
 .iscte-bluer {
   background-color: #0d28c2;
+}
+
+.game-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.game-description h1 {
+  margin-bottom: 40px;
+  color: #0d28c2
+}
+
+.game-description h4 {
+  margin-bottom: 40px;
+}
+
+.game-description p {
+  margin-bottom: 60px;
+}
+
+.play-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background-color: #0d28c2;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.play-button:hover {
+  background-color: #324eec;
 }

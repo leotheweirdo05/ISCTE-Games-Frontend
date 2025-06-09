@@ -8,14 +8,19 @@ const PreGameShooter = () => {
   return (
     <>
       <Helmet>
-        <title>PreShooter</title>
+        <title>Shooter </title>
       </Helmet>
-
+    
       <Header />
-      <h1>Test</h1>
-      <p>Epic test page</p>
-      <Link to='/play/shooter'>[DEBUG LINK TO shooter GAEM]</Link>
       
+      <div className="game-description">
+        <h1>Shooter</h1>
+        <h4>Shoot as many ships as you can!</h4>
+        <p>Drag your ship through the screen with your finger</p>
+        <Link to='/play/shooter'>
+          <button className="play-button">Play</button>
+        </Link>
+      </div>
     </>
   );
 };
