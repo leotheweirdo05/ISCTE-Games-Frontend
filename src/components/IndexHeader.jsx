@@ -3,18 +3,12 @@ import styles from './IndexHeader.module.css';
 
 export default function IndexHeader() {
   return (
-    <header className={`d-block py-4 ${styles.indexHeader}`}>
-      <div className="container text-center">
-        <div className="row align-items-center">
-          <div className="col">
-            <img src="/images/iscte-logo.png" alt="ISCTE Logo" height="60" />
-            <div className="mt-2">
-              <h5 className="mb-0">ISCTE Games Portal</h5>
-              <small className="text-muted">Powered by Students, for Students</small>
-            </div>
-          </div>
-          <div className="col"></div>
-          <div className="col">[img]</div>
+    <header style={{ backgroundColor: "#0d28c2" }} className="text-white py-3 px-4">
+      <div className="d-flex align-items-center justify-content-between">
+        <img src="/images/iscte-logo.png" alt="ISCTE Logo" height="40" />
+        <div className="text-end">
+          <div className="small">15 Março 2025</div>
+          <h5 className="mb-0">O teu dia</h5>
         </div>
       </div>
     </header>
