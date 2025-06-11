@@ -153,3 +153,9 @@ body {
 .leaderboard-header {
   background-color: #0d28c2 !important; 
 }
+
+.btn-secondary {
+  background-color: #0d28c2 !important; 
+  border-color: #0d28c2 !important;
+  color: white !important;
+}
