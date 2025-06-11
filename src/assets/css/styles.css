@@ -60,12 +60,12 @@ body {
 
 .game-wrapper {
   position: fixed;
-  top: 50px; /* Height of your header */
+  top: 50px; /* Height of the header */
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  max-width: none; /* Remove this if you want full width always */
+  max-width: none;
 }
 
 .game-wrapper iframe {
@@ -79,7 +79,7 @@ body {
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
   padding: 1rem;
-  padding-bottom: 6rem; /* prevent overlap with bottom nav */
+  padding-bottom: 6rem;
   box-sizing: border-box;
 }
 
@@ -148,4 +148,8 @@ body {
 
 .play-button:hover {
   background-color: #324eec;
+}
+
+.leaderboard-header {
+  background-color: #0d28c2 !important; 
 }
