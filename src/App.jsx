@@ -7,6 +7,11 @@ import IndexPage from './pages/IndexPage.jsx';
 import Games from './pages/Games.jsx';
 import Leaderboards from './pages/Leaderboards.jsx';
 
+import Leaderboard2048 from './pages/leaderboards/Leaderboard2048.jsx';
+import LeaderboardShooter from './pages/leaderboards/LeaderboardShooter.jsx';
+import LeaderboardPinball from './pages/leaderboards/LeaderboardPinball.jsx';
+import LeaderboardMemory from './pages/leaderboards/LeaderboardMemory.jsx';
+
 import PreGame2048 from './pages/gamePreviews/PreGame2048.jsx';
 import PreGameShooter from './pages/gamePreviews/PreGameShooter.jsx';
 import PreGamePinball from './pages/gamePreviews/PreGamePinball.jsx';
@@ -37,6 +42,11 @@ function App() {
 
         {/* Authenticated routes without tabs */}
         <Route path="/index" element={isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />} />
+
+        <Route path="/leaderboards/2048" element={isLoggedIn ? <Leaderboard2048 /> : <Navigate to="/login" replace />} />
+        <Route path="/leaderboards/shooter" element={isLoggedIn ? <LeaderboardShooter /> : <Navigate to="/login" replace />} />
+        <Route path="/leaderboards/pinball" element={isLoggedIn ? <LeaderboardPinball /> : <Navigate to="/login" replace />} />
+        <Route path="/leaderboards/memory-game" element={isLoggedIn ? <LeaderboardMemory /> : <Navigate to="/login" replace />} />
 
         <Route path="/preview/2048" element={isLoggedIn ? <PreGame2048 /> : <Navigate to="/login" replace />} />
         <Route path="/preview/shooter" element={isLoggedIn ? <PreGameShooter /> : <Navigate to="/login" replace />} />
