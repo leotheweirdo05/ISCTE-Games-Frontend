@@ -159,3 +159,16 @@ body {
   border-color: #0d28c2 !important;
   color: white !important;
 }
+
+.intro-box {
+  background-color: #9ee035;
+  color: #28640c;
+}
+
+.schedule-hour-box {
+  background-color: #dde5fc;
+}
+
+.schedule-class-box {
+  background-color: #eff4fd;
+}
