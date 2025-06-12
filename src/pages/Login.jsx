@@ -14,7 +14,8 @@ const Login = ({onLogin}) => {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  // src/pages/Login.jsx
+const handleLogin = async (e) => {
   e.preventDefault();
   setErrorMessage("");
   if (!email.trim() || !password.trim()) {
@@ -26,7 +27,7 @@ const Login = ({onLogin}) => {
     const response = await fetch("http://localhost:3000/api/auth/login", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
-      credentials: "include", // Ensure cookies are sent/received
+      credentials: "include", // Include cookies in request/response
       body: JSON.stringify({email, password}),
     });
 
@@ -38,7 +39,7 @@ const Login = ({onLogin}) => {
       return;
     }
 
-    localStorage.setItem("token", data.token); // Keep for other uses
+    localStorage.setItem("token", data.token); // Keep for Godot and other uses
     onLogin && onLogin(data.user);
     navigate("/");
   } catch (err) {
