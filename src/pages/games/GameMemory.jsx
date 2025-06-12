@@ -23,7 +23,7 @@ const GameMemory = () => {
     if (iframe) {
       iframe.addEventListener('load', sendToken);
     }
-    const timer = setTimeout(sendToken, 1000);
+    const timer = setTimeout(sendToken, 10000);
 
     return () => {
       if (iframe) {

@@ -27,7 +27,7 @@ const GameShooter = () => {
     }
 
     // Retry sending token after a short delay
-    const timer = setTimeout(sendToken, 1000);
+    const timer = setTimeout(sendToken, 15000);
 
     // Cleanup
     return () => {
