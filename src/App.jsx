@@ -71,22 +71,97 @@ function App() {
         />
 
         {/* Authenticated routes without tabs */}
-        <Route path="/index" element={isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />} />
+        <Route
+          path="/index"
+          element={
+            isLoggedIn ? <IndexPage /> : <Navigate to="/login" replace />
+          }
+        />
 
-        <Route path="/leaderboards/2048" element={isLoggedIn ? <Leaderboard2048 /> : <Navigate to="/login" replace />} />
-        <Route path="/leaderboards/shooter" element={isLoggedIn ? <LeaderboardShooter /> : <Navigate to="/login" replace />} />
-        <Route path="/leaderboards/pinball" element={isLoggedIn ? <LeaderboardPinball /> : <Navigate to="/login" replace />} />
-        <Route path="/leaderboards/memory-game" element={isLoggedIn ? <LeaderboardMemory /> : <Navigate to="/login" replace />} />
+        <Route
+          path="/leaderboards/2048"
+          element={
+            isLoggedIn ? <Leaderboard2048 /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/leaderboards/shooter"
+          element={
+            isLoggedIn ? (
+              <LeaderboardShooter />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route
+          path="/leaderboards/pinball"
+          element={
+            isLoggedIn ? (
+              <LeaderboardPinball />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route
+          path="/leaderboards/memory-game"
+          element={
+            isLoggedIn ? (
+              <LeaderboardMemory />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
 
-        <Route path="/preview/2048" element={isLoggedIn ? <PreGame2048 /> : <Navigate to="/login" replace />} />
-        <Route path="/preview/shooter" element={isLoggedIn ? <PreGameShooter /> : <Navigate to="/login" replace />} />
-        <Route path="/preview/pinball" element={isLoggedIn ? <PreGamePinball /> : <Navigate to="/login" replace />} />
-        <Route path="/preview/memory" element={isLoggedIn ? <PreGameMemory /> : <Navigate to="/login" replace />} />
+        <Route
+          path="/preview/2048"
+          element={
+            isLoggedIn ? <PreGame2048 /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/preview/shooter"
+          element={
+            isLoggedIn ? <PreGameShooter /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/preview/pinball"
+          element={
+            isLoggedIn ? <PreGamePinball /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/preview/memory"
+          element={
+            isLoggedIn ? <PreGameMemory /> : <Navigate to="/login" replace />
+          }
+        />
 
-        <Route path="/play/2048" element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />} />
-        <Route path="/play/shooter" element={isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />} />
-        <Route path="/play/pinball" element={isLoggedIn ? <GamePinball /> : <Navigate to="/login" replace />} />
-        <Route path="/play/memory" element={isLoggedIn ? <GameMemory /> : <Navigate to="/login" replace />} />
+        <Route
+          path="/play/2048"
+          element={isLoggedIn ? <Game2048 /> : <Navigate to="/login" replace />}
+        />
+        <Route
+          path="/play/shooter"
+          element={
+            isLoggedIn ? <GameShooter /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/play/pinball"
+          element={
+            isLoggedIn ? <GamePinball /> : <Navigate to="/login" replace />
+          }
+        />
+        <Route
+          path="/play/memory"
+          element={
+            isLoggedIn ? <GameMemory /> : <Navigate to="/login" replace />
+          }
+        />
 
         {/* Root redirect */}
         <Route
