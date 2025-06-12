@@ -14,37 +14,39 @@ const Login = ({onLogin}) => {
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setErrorMessage("");
-    if (!email.trim() || !password.trim()) {
-      setErrorMessage("Please fill in both email/student number and password.");
+  // src/pages/Login.jsx
+const handleLogin = async (e) => {
+  e.preventDefault();
+  setErrorMessage("");
+  if (!email.trim() || !password.trim()) {
+    setErrorMessage("Please fill in both email/student number and password.");
+    return;
+  }
+
+  try {
+    const response = await fetch("http://localhost:3000/api/auth/login", {
+      method: "POST",
+      headers: {"Content-Type": "application/json"},
+      credentials: "include", // Include cookies in request/response
+      body: JSON.stringify({email, password}),
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      setErrorMessage(data.message || "Login failed");
+      console.log("Server response:", data);
       return;
     }
 
-    try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({email, password}),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        setErrorMessage(data.message || "Login failed");
-        console.log("Server response:", data); // Log for debugging
-        return;
-      }
-
-      localStorage.setItem("token", data.token);
-      onLogin && onLogin(data.user);
-      navigate("/");
-    } catch (err) {
-      setErrorMessage("Error connecting to server");
-      console.error("Network error:", err); // Log for debugging
-    }
-  };
+    localStorage.setItem("token", data.token); // Keep for Godot and other uses
+    onLogin && onLogin(data.user);
+    navigate("/");
+  } catch (err) {
+    setErrorMessage("Error connecting to server");
+    console.error("Network error:", err);
+  }
+};
 
   return (
     <>
