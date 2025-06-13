@@ -35,7 +35,7 @@ http://localhost
 
 
 
-## Folder struture
+## Folder structure
 
 ```bash
 ISCTE-Games-Frontend/
