@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Header.module.css';
+import { RiAccountCircleFill } from "react-icons/ri";
 
 
 export default function Header() {
@@ -11,7 +12,10 @@ export default function Header() {
             <img src="/images/iscte-logo.png" alt="ISCTE Logo" height="40" />
           </div>
           <div className="col"></div>
-          <div className="col">[img]</div>
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col"></div>
+          <div className="col"><RiAccountCircleFill className="header-icon"/></div>
         </div>
       </div>
     </header>

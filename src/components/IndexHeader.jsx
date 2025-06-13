@@ -1,4 +1,5 @@
 import React from 'react';
+import { RiAccountCircleFill } from "react-icons/ri";
 
 export default function IndexHeader() {
   const today = new Date();
@@ -17,6 +18,7 @@ export default function IndexHeader() {
           <h5 className="mt-2 fs-1">Your day</h5>
         </div>
       </div>
+      <RiAccountCircleFill className="header-icon"/>
     </header>
   );
 }
