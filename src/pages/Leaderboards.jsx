@@ -125,8 +125,6 @@ export default function Leaderboards() {
           </div>
         ))}
       </div>
-
-      <BottomNav />
     </>
   );
 }
