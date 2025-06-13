@@ -8,13 +8,13 @@
 
 1. Clone este repositório em sua máquina usando o seguinte comando:
 ```bash
-git clone git@github.com:StorThiago/dsa-frontend.git
+git clone git@github.com:leotheweirdo05/ISCTE-Games-Frontend.git
 ```
 
 
 2. Entre no repositório clonado
 ```bash
-cd dsa-frontend/
+cd ISCTE-Games-Frontend/
 ```
 
 
@@ -38,35 +38,34 @@ http://localhost
 ## Folder struture
 
 ```bash
-dsa-frontend/
-├── nginx/
-│   ├── nginx.conf
-├── src/
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── styles.css
-│   │   ├── images/
-│   │   ├── js/
-│   │   ├── scss/
-│   │   │   ├── custom.scss
-│   ├── components/
-│   │   ├── Footer.jsx
-│   │   ├── Footer.module.css
-│   │   ├── Header.jsx
-│   │   ├── Header.module.css
-│   │   ├── Navbar.jsx
-│   │   ├── Sidebar.jsx
-│   ├── pages/
-│   │   ├── Home.jsx
-│   │   ├── Perfil.jsx
-│   ├── App.js
-│   ├── index.html
-│   ├── main.jsx
-├── docker-compose.yml
+ISCTE-Games-Frontend/
+├── docker-compose.yaml
 ├── Dockerfile
-├── LICENSE
 ├── package.json
 ├── vite.config.js
+├── README.md
+│
+├── nginx/
+│   └── nginx.conf
+│
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   ├── assets/
+│   │   ├── css/
+│   │   └── scss/
+│   ├── components/
+│   │   └── (componentes de navegação e layout)
+│   ├── pages/
+│   │   ├── (páginas principais)
+│   │   ├── gamePreviews/
+│   │   ├── games/
+│   │   └── leaderboards/
+│   └── public/
+│       ├── fonts/
+│       ├── games/
+│       │   └── (ficheiros dos jogos Godot: 2048, Memory, Pinball, Shooter)
+│       └── images/
 ```
 
 
@@ -85,5 +84,6 @@ dsa-frontend/
 
 ## Autores
 
-- [@StorThiago](https://www.github.com/StorThiago)
-- [@joaomatosiscte](https://www.github.com/joaomatosiscte)
+- [@leotheweirdo05](https://www.github.com/leotheweirdo05)
+- [@guilherme-catoja](https://www.github.com/guilherme-catoja)
+- [@FederEx18](https://github.com/FederEx18)
